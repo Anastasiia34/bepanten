@@ -1,0 +1,50 @@
+@keyframes scrollAnimation {
+    0%{transform: translateY(0); opacity: 0}
+    20%{transform: translateY(0); opacity: 0}
+    50%{transform: translateY(15px); opacity: 1}
+    100%{transform: translateY(15px); opacity: 1}
+}
+
+.scrolldown-icon {
+    @include media-md-from {
+        position: absolute;
+        bottom: 200px;
+        right: 80px;
+        z-index: 100;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s ease;
+
+        &__mouse {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 50px;
+            margin-left: 4px;
+
+            animation: scrollAnimation 1.3s ease;
+            animation-iteration-count: infinite;
+        }
+		/* цвет иконки */
+		&__arrow,
+		&__mouse {
+			g, path {
+				stroke: getColor(black);
+			}
+		}
+
+        &._hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @include media-md-to {
+        display: none;
+    }
+}

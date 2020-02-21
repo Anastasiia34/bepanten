@@ -1,0 +1,53 @@
+$ps-theme-default: (
+  border-radius: $ps-border-radius,
+  rail-default-opacity: $ps-rail-default-opacity,
+  rail-container-hover-opacity: $ps-rail-container-hover-opacity,
+  rail-hover-opacity: $ps-rail-hover-opacity,
+  bar-bg: $ps-bar-bg,
+  bar-container-hover-bg: $ps-bar-container-hover-bg,
+  bar-hover-bg: $ps-bar-hover-bg,
+  rail-hover-bg: $ps-rail-hover-bg,
+  scrollbar-x-rail-bottom: $ps-scrollbar-x-rail-bottom,
+  scrollbar-x-rail-height: $ps-scrollbar-x-rail-height,
+  scrollbar-x-bottom: $ps-scrollbar-x-bottom,
+  scrollbar-x-height: $ps-scrollbar-x-height,
+  scrollbar-x-hover-height: $ps-scrollbar-x-hover-height,
+  scrollbar-y-rail-right: $ps-scrollbar-y-rail-right,
+  scrollbar-y-rail-width: $ps-scrollbar-y-rail-width,
+  scrollbar-y-right: $ps-scrollbar-y-right,
+  scrollbar-y-width: $ps-scrollbar-y-width,
+  scrollbar-y-hover-width: $ps-scrollbar-y-hover-width,
+);
+
+// Default theme
+.ps {
+  @include ps-container($ps-theme-default);
+}
+
+// For auto-scroll theme
+.ps--theme_light {
+  @include ps-container(map-merge($ps-theme-default, (
+    bar-bg: #e9e9e9,
+    rail-default-opacity: 0.6,
+    rail-container-hover-opacity: 1,
+    rail-hover-opacity: 1,
+    border-radius: 4px,
+    scrollbar-x-rail-height: 8px,
+    scrollbar-x-height: 8px,
+    scrollbar-x-hover-height: 8px,
+    scrollbar-y-rail-width: 8px,
+    scrollbar-y-rail-right: 8px!important,
+    scrollbar-y-width: 8px,
+    scrollbar-y-hover-width: 8px
+  )));
+}
+
+// Orange theme
+.ps--theme_orange {
+  @include ps-container(map-merge($ps-theme-default, (
+          bar-bg: #f8f8f8,
+          bar-container-hover-bg: #fcbc31,
+          bar-hover-bg: #fcbc31,
+          rail-hover-bg: #f8f8f8
+  )));
+}

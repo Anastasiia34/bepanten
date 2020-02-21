@@ -1,0 +1,177 @@
+.#{$prefix}-participants
+    background: url(#{$pic-path}/part-bg.png) no-repeat center 0, linear-gradient(to bottom, transparent 3%, #ffffff 4%)
+    background-size: contain
+    padding: 125px 0 0
+    h2
+        color: $pink
+        font-size: 40px
+        margin-bottom: 15px
+    .rules
+        display: block
+        margin: 23px 0 30px
+        color: $blue
+        text-decoration: underline
+    .menu
+        position: relative
+        display: flex
+        justify-content: center
+        margin-bottom: 102px
+        &:before, &:after, .item:first-child:before, .item:nth-child(2):before, .item:nth-child(3):before, .item:after
+            content: ''
+            position: absolute
+        &:before
+            background: url(#{$pic-path}/heart1.png) no-repeat center
+            width: 138px
+            height: 133px
+            left: -10px
+            top: -100px
+        &:after
+            background: url(#{$pic-path}/heart2.png) no-repeat center
+            transform: scaleX(-1)
+            width: 139px
+            height: 116px
+            top: -100px
+            right: 0
+        .item
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            background: #DDF3FB
+            color: $l-blue
+            font-size: 20px
+            margin: 0 8px
+            width: 239px
+            height: 133px
+            border-radius: 10px
+            transition: all .5s
+            cursor: pointer
+            &.active
+                background: $pink
+                color: #ffffff
+                &:before, &:after
+                    opacity: 1
+                    z-index: 1
+                    pointer-events: none
+            .num
+                font-size: 40px
+            &:before
+                opacity: 0
+                transition: all .5s
+            &:after
+                background: url(#{$pic-path}/arrow.png) no-repeat center
+                width: 24px
+                height: 60px
+                bottom: -60px
+                left: calc(50% - 12px)
+                opacity: 0
+                transition: all .5s
+        .item:first-child:before
+            background: url(#{$pic-path}/menu1.png) no-repeat center
+            width: 140px
+            height: 168px
+            top: 0
+            left: -60px
+        .item:nth-child(2):before
+            background: url(#{$pic-path}/menu2.png) no-repeat center
+            width: 155px
+            height: 138px
+            top: 30px
+            left: -40px
+        .item:nth-child(3):before
+            background: url(#{$pic-path}/menu3.png) no-repeat center
+            width: 97px
+            height: 156px
+            top: 0
+            right: -50px
+    .part
+        display: block
+        .moms
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+        .mom
+            width: 140px
+            margin: 0 60px 65px
+            font-size: 20px
+            color: $pink
+            font-family: 'Museo Cyrillic Bold', sans-serif
+        .name
+            color: $blue
+        .ava
+            display: block
+            margin: 0 auto 10px
+            border-radius: 50%
+            width: 100px
+            height: 100px
+            object-fit: cover
+    #part2, #part3
+        display: none
+    .pagination
+        display: flex
+        justify-content: center
+        a
+            margin: 0 16px
+            color: $pink
+            &.active
+                color: #ffffff
+                position: relative
+                z-index: 1
+                &:before
+                    content: ''
+                    position: absolute
+                    background: $pink
+                    z-index: -1
+                    width: 39px
+                    height: 39px
+                    border-radius: 50%  
+                    top: -12px
+                    left: calc(50% - 20px)
+    #part1
+        display: block
+    .#{$prefix}-about
+        background: none
+    @media (max-width: 1100px)
+        .menu .item p+p
+            margin-top: 0
+        .part
+            .mom
+                margin: 0 50px 65px
+    @media (max-width: 750px)
+        background: url(#{$pic-path}/part-bg.png) no-repeat center 0, linear-gradient(to bottom, transparent 1%, #ffffff 2%)
+        background-size: contain
+        h2
+            font-size: 18px
+        .under
+            font-size: 15px
+        .menu
+            flex-direction: column
+            align-items: center
+            .item
+                width: 180px
+                height: 100px
+                margin-top: 10px
+                &.active:after
+                    display: none
+                &.active:before
+                    transform: scale(.7) translateY(-40px)
+            &:before
+                background-size: contain
+                width: 88px
+                height: 83px
+                top: -50px
+            &:after
+                background-size: contain
+                width: 82px
+                height: 86px
+                top: auto
+                bottom: -70px
+        .part
+            .mom
+                width: 96px
+                margin: 0 20px 45px
+                font-size: 14px
+            .ava
+                width: 69px
+                height: 69px

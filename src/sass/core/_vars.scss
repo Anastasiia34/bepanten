@@ -1,0 +1,31 @@
+$prefix: 'bep-2';
+$pic-path: '../src/images';
+
+$color-scheme: (
+    "white": #ffffff,
+    "black": #000000,
+    "gray": #636363,
+    "green": #00b1b1,
+    "green-light": #c8eae9,
+    "green-dark": #00a4a8,
+    'blue': #8DD6F3
+);
+
+$pink: #F6A3BE;
+$blue: #234D96;
+$l-blue: #8DD6F3;
+
+@function getColor($name) {
+    @return map_get($color-scheme, quote($name));
+}
+
+$media: (
+    "xs": 320px,
+    "sm": 580px,
+    "md": 960px,
+    "lg": 1200px
+);
+
+@function breakpoint($name) {
+    @return map_get($media, quote($name));
+}

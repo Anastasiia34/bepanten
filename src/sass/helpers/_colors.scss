@@ -1,0 +1,11 @@
+@each $name, $value in $color-scheme {
+  .#{$name}-bg {
+    background-color: $value;
+  }
+  .#{$name}-text {
+    color: $value;
+  }
+  .#{$name}-svg {
+    fill: $value;
+  }
+}

@@ -1,0 +1,237 @@
+.#{$prefix}-mamateka
+    background: url(#{$pic-path}/bottom-bg.png) no-repeat center 0, linear-gradient(to bottom, transparent 3%, #ffffff 4%)
+    padding: 125px 0 0
+    h2
+        color: $l-blue
+        font-size: 40px
+    .list-block
+        max-width: 950px
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        color: $pink
+        text-align: left
+        line-height: 1.3
+    .item   
+        display: flex
+        width: calc(100%/3)
+        margin-top: 55px
+        text-align: left
+        transition: opacity .5s
+        &.left .word-popup
+            left: -109px
+            &:before
+                left: 110px
+        &.center .word-popup
+            left: -445px
+            &:before
+                left: 450px
+        &.right .word-popup
+            left: -742px
+            &:before
+                left: 750px
+        .right
+            margin-top: 10px
+            margin-left: 25px
+    .letter
+        text-transform: uppercase  
+        font-size: 40px
+        color: #ffffff
+        position: relative
+        z-index: 1
+        width: 84px
+        text-align: center
+        &:before
+            content: ''
+            position: absolute
+            width: 84px
+            height: 84px
+            background: $pink
+            border-radius: 50%
+            z-index: -1
+            top: -20px
+            left: calc(50% - 40px)
+    .word
+        position: relative
+    .word + .word
+        margin-top: 15px
+    .word-text
+        cursor: pointer
+        text-decoration: underline
+    .word-popup
+        background: #ddf3fb
+        position: absolute
+        top: 35px
+        color: $blue
+        z-index: 1
+        width: 950px
+        padding: 65px 275px 50px 84px
+        box-sizing: border-box
+        display: none
+        z-index: 2
+        &:before
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 10px 10px 10px
+            border-color: transparent transparent #ddf3fb transparent
+            top: -10px
+        .product
+            position: absolute
+            right: 78px
+            top: 83px
+        .bigger
+            font-size: 20px
+        .#{$prefix}-sharing
+            text-align: left
+            margin: 30px 0 65px -10px
+        .close
+            position: absolute
+            cursor: pointer
+            width: 26px
+            height: 26px
+            right: 15px
+            top: 15px
+    .bubble-block
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 12px 12px 0
+            border-color: transparent #ffffff transparent transparent
+            left: 71px
+            top: 0
+        .ava
+            position: absolute
+            width: 60px
+            height: 60px
+            border-radius: 50%
+            object-fit: cover
+            left: 0
+            top: -22px
+    .bubble-block+.bubble-block
+        margin-top: 25px
+    .comments
+        h3
+            color: $blue
+            font-size: 20px
+            font-family: 'Museo Cyrillic Bold', sans-serif
+            margin-bottom: 35px
+        .sent
+            color: $l-blue
+            padding: 18px
+            text-align: center
+            border: 1px dashed #8DD6F3
+            border-radius: 10px
+            margin-bottom: 60px
+        textarea
+            resize: none
+            color: #000000
+            height: 115px
+            font-size: 18px
+            &::placeholder
+                color: #D3D3D3
+                font-size: 18px
+        textarea, .bubble
+            background: #ffffff
+            padding: 30px 35px
+            margin-left: 83px
+            width: calc(100% - 83px)
+            border-radius: 10px
+            border-top-left-radius: 0
+            border: none
+            box-sizing: border-box
+        .pink-btn
+            margin-top: 20px
+            margin-bottom: 35px
+            padding: 15px 38px
+            font-size: 16px
+            font-family: 'Museo Cyrillic Bold', sans-serif
+            margin-left: 83px
+    .bubble
+        color: $blue
+    .#{$prefix}-about
+        background: none
+    @media (max-width: 1100px)
+        h2
+            font-size: 31px
+        .item
+            width: calc(100%/2)
+            &.left .word-popup, &.center .word-popup, &.right .word-popup
+                left: auto
+                right: auto
+            &:nth-child(odd) .word-popup
+                left: -81px
+            &:nth-child(even) .word-popup
+                left: -443px
+                &:before
+                    right: 233px!important
+            &.left .word-popup:before, &.center .word-popup:before, &.right .word-popup:before
+                right: auto
+                left: auto
+        .word-popup
+            padding: 35px 60px 55px 40px
+            width: 693px
+            .bigger
+                font-size: 17px
+            .text
+                font-size: 14px
+            .bigger, .text
+                max-width: 407px
+            .product
+                width: 109px
+        .letter
+            font-size: 26px
+            width: 70px
+            &:before
+                width: 55px
+                height: 55px
+                top: -15px
+                left: calc(50% - 28px)
+    @media (max-width: 750px)
+        background: url(#{$pic-path}/bottom-bg.png) no-repeat 30% 0, linear-gradient(to bottom, transparent 2%, #ffffff 2%)
+        .item
+            width: 100%
+            margin-top: 35px
+        .word-popup
+            width: 320px
+            padding: 35px 15px 45px
+            .product
+                width: 91px
+                position: static
+                transform: rotate(90deg) translateY(-100px)
+                margin: -120px 0px
+            .product + .comments
+                margin-top: 50px
+        .comments
+            textarea, .bubble
+                width: 100%
+                margin-left: 0
+            .bubble
+                background: none
+                text-align: center
+            .pink-btn
+                margin: 20px auto 65px
+                display: block
+                width: 186px
+                box-sizing: border-box
+        .bubble-block 
+            .ava
+                width: 50px
+                height: 50px
+                left: calc(50% - 25px)
+                top: -32px
+            &:before
+                display: none
+        .item:nth-child(odd) .word-popup, .item:nth-child(even) .word-popup
+            left: -118px
+        .item:nth-child(odd) .word-popup:before, .item:nth-child(even) .word-popup:before
+            right: 180px!important
+        .word-popup .#{$prefix}-sharing__item
+            transform: scale(0.8)
+            margin: 0 

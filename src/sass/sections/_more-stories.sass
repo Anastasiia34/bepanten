@@ -1,0 +1,82 @@
+.#{$prefix}-more-stories
+    background: linear-gradient(to bottom, transparent 9%, #ffffff 9%), url(#{$pic-path}/aboutbg.png) no-repeat center 0
+    padding: 120px 0 30px
+    .#{$prefix}-moms-stories
+        justify-content: center
+        max-width: none
+    .title
+        color: $l-blue
+        font-size: 66px
+    .item
+        position: relative
+        margin: 0 20px
+        &.first
+            background: #F4FBFE url(#{$pic-path}/story1bg-dark.png) no-repeat center 0
+            background-size: contain
+            &:before
+                content: ''
+                position: absolute
+                background: url(#{$pic-path}/morestories-1.png) no-repeat center 0
+                width: 459px
+                height: 478px
+                background-size: contain
+                top: -50px
+                left: -70px
+                pointer-events: none
+                z-index: 1
+        &.second
+            background: #F4FBFE url(#{$pic-path}/story2bg-dark.png) no-repeat center 0
+            background-size: contain
+            &:before
+                content: ''
+                position: absolute
+                background: url(#{$pic-path}/item2-mob.png) no-repeat center 0
+                width: 54px
+                height: 43px
+                background-size: contain
+                top: 40px
+                left: 180px
+                pointer-events: none
+        &.third
+            background: #F4FBFE url(#{$pic-path}/story3bg-dark.png) no-repeat center 0
+            background-size: contain
+            &:before
+                content: ''
+                position: absolute
+                background: url(#{$pic-path}/item3-mob.png) no-repeat center 0
+                width: 164px
+                height: 90px
+                background-size: contain
+                top: 20px
+                left: 50px
+                pointer-events: none
+    .abs
+        display: none
+    @media (max-width: 1100px)
+        .title
+            font-size: 42px
+        .item
+            &.first:before
+                width: 300px
+                top: -20px
+                left: -50px
+            &.second:before
+                width: 34px
+                left: 120px
+            &.third:before
+                width: 104px
+                left: 34px
+    @media (max-width: 750px)
+        .item
+            margin: 50px 0 0
+            &.first:before
+                width: 360px
+                top: -30px
+                left: -30px
+            &.second:before
+                width: 54px
+                left: 170px
+            &.third:before
+                width: 164px
+                left: 44px
+                top: 0

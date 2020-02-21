@@ -1,0 +1,20 @@
+.hidden-xs{
+    @media screen and (min-width: map_get($media, xs)) and (max-width: map_get($media, sm)){
+        display: none !important;
+    }
+}
+.hidden-sm{
+    @media screen and (min-width: map_get($media, sm)) and (max-width: map_get($media, md)){
+        display: none !important;
+    }
+}
+.hidden-md{
+    @media screen and (min-width: map_get($media, md)) and (max-width: map_get($media, lg)){
+        display: none !important;
+    }
+}
+.hidden-lg{
+    @media screen and (min-width: map_get($media, lg)){
+        display: none !important;
+    }
+}

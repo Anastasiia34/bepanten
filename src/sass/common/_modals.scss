@@ -1,0 +1,122 @@
+.#{$prefix} {
+    &-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(getColor(black), .8);
+        z-index: 1300000;
+        overflow: auto;
+
+        @include media-md-to {
+          display: block;
+        }
+
+        &__wrap {
+            max-width: 750px;
+            margin: 70px 0;
+        }
+
+        &__close {
+            position: absolute;
+            top: 20px;
+            right: 9px;
+            width: 23px;
+            height: 23px;
+            z-index: 1;
+            cursor: pointer;
+        
+            svg {
+              height: 100%;
+              width: 100%;
+              //fill: getColor(white);
+            }
+        
+        }
+		
+        &-popup {
+            &__content {
+                padding: 40px;
+                background-color: white;
+                //overflow: hidden;
+                &--rules{
+					padding: 40px 0;
+                }
+            }
+			&__title {
+				font-size:30px;
+				padding:0 0 30px;
+			}
+            
+            &__scroll{
+                height: 300px;
+
+                &-bar{
+                    position: absolute;
+                    width: 40px;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #e1eefa;
+                }
+            }
+            &__rules-text{
+                padding: 0 40px;
+                b{
+                    font-weight: bold;
+                }
+        
+                @include media-sm-to {
+                    padding-left: 20px;
+                }
+				/* fix for BB css*/
+				ol li {
+					font-weight:bold;
+					padding-top:15px;
+				}
+				ol ol li, ol ol ol li, ol ol ol ol li {
+					font-weight:normal;
+					padding-top:0;
+				}
+				li { 
+					list-style-type: none;
+					margin:5px 10px;					
+				}
+				ol { counter-reset: list1; }
+				ol li:before {
+					counter-increment: list1;
+					content: counter(list1) ". ";
+					font-weight:bold;
+				}
+				ol ol { counter-reset: list2; }
+				ol ol li:before {
+					counter-increment: list2;
+					content: counter(list1) "." counter(list2) ". ";
+					font-weight:bold;
+				}
+
+				ol ol ol { counter-reset: list3; }
+				ol ol ol li:before {
+					counter-increment: list3;
+					content: counter(list1) "." counter(list2)  "." counter(list3) ". ";
+					font-weight:bold;
+				}
+				
+				ol ol ol ol { counter-reset: list4; }
+				ol ol ol ol li:before {
+					counter-increment: list4;
+					content: counter(list1) "." counter(list2) "." counter(list3)  "." counter(list4) ". ";
+					font-weight:bold;
+				}
+				/* /fix for BB css*/
+            }
+        }
+        
+    }
+
+}

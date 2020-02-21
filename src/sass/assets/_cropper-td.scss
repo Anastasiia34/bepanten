@@ -1,0 +1,214 @@
+/* croper */
+.cropper.__td {
+  display: none;
+  width: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 0 0 0 0;
+}
+
+.cropper.__td .crop-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cropper.__td .crop-modal__wrap {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  box-shadow: 0px 24px 27px 0px rgba(0, 0, 0, 0.28);
+  padding: 30px;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 579px) {
+  .cropper.__td .crop-modal__wrap {
+    min-width: 300px;
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 959px) {
+  .cropper.__td .crop-modal__wrap {
+    min-width: 500px;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .cropper.__td .crop-modal__wrap {
+    min-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cropper.__td .crop-modal__wrap {
+    min-width: 700px;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .cropper.__td .crop-modal__wrap {
+    padding: 10px;
+  }
+}
+
+.cropper.__td .cropper-view-box {
+  border-radius: 0;
+  outline: 0px;
+  box-shadow: 0 0 0 1px #323232;
+}
+
+.cropper.__td .cropper-modal {
+  opacity: .8;
+  background-color: #FFF;
+}
+
+.cropper.__td .modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cropper.__td .image-cropper {
+  position: relative;
+}
+
+.cropper.__td .img-container {
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .cropper.__td .img-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cropper.__td .img-container {
+    width: 100%;
+  }
+}
+
+.cropper.__td .image-resize {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cropper.__td .image-resize a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #93378c;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  color:#fff;
+}
+
+.cropper.__td .file-upload {
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 980px) {
+  .cropper.__td .file-upload {
+    float: none;
+    text-align: center;
+  }
+}
+
+.cropper.__td .file-upload span {
+  border-bottom: 1px solid #323232;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cropper.__td .file-upload input[type="file"] {
+  position: absolute;
+  left: -3000px;
+}
+
+.cropper.__td .filename {
+  background: transparent;
+  border: 0;
+}
+
+.cropper.__td .modal-cropper {
+  position: absolute;
+}
+
+.cropper.__td .upload-container {
+  position: absolute;
+  margin-top: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 980px) {
+  .cropper.__td .upload-container {
+    margin-top: 0;
+    left: 50%;
+    top: 25px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.cropper.__td .upload-holder {
+  position: relative;
+  padding: 30px 0 18px;
+  background-color: #f4f4f4;
+}
+
+@media (min-width: 320px) and (max-width: 980px) {
+  .cropper.__td .upload-holder {
+    padding: 62px 0 18px;
+  }
+}
+
+.cropper.__td .__comment-form-submit {
+  cursor: pointer;
+  width: 181px;
+  height: 59px;
+  //line-height: 59px;
+  border: none;
+  background-color: #93378c;
+  //background-image: url("../src/images/td/green-btn-td-form.png");
+  background-size: cover;
+  color: #ffffff;
+  /*font-family: "KiddyKittyLight";*/
+  font-size: 22px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+  .cropper.__td .__comment-form-submit {
+    width: 141px;
+    height: 46px;
+    font-size: 18px;
+    line-height: 46px;
+  }
+}
+
+/* /croper */

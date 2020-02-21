@@ -1,0 +1,27 @@
+.#{$prefix} { 
+	&-header{
+		color: getColor(black);
+		&__in{
+			//background: url(../src/images/common/bg-woman.jpg) no-repeat 100% 0;
+			height: 200px;
+			position: relative;
+		}
+		&__title{
+			
+		}
+		&__caption{
+			
+		}
+		&__logo{
+			//background: url(../src/images/common/logo-top.png) no-repeat 0 0;
+			width: 276px;
+			height: 143px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+	}
+
+}
+

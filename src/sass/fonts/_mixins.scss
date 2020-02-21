@@ -1,0 +1,17 @@
+// How to use
+// @include font-max-min(50, 9);
+// @include font-max-min(40, 8);
+
+$break: (100vw - #{breakpoint(xs)}) / (breakpoint(lg) - breakpoint(xs));
+
+@mixin font-max-min($max, $min) {
+    .font-#{$max}-#{$min} {
+        font-size: #{$max}px;
+
+        @include media-lg-to {
+            font-size: calc(
+                #{$min}px + (#{$max} - #{$min}) * ( #{$break} )
+            )
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.#{$prefix} {
+	&-footer {
+		/*** warning ***/
+		&__warning-img{
+			display: none;
+			padding:10px 0;
+			&--lg{
+				@include media-lg-from{
+					display: block;
+				}
+			}
+			&--md{
+				@include media-md-lg{
+					display: block;
+				}
+			}
+			&--sm{
+				@include media-sm-md{
+					display: block;
+				}
+			}
+			&--xs{
+				@include media-sm-to{
+					display: block;
+				}
+			}
+		}
+		/*** /warning ***/
+	}
+}
